@@ -1,7 +1,7 @@
-import fastify from 'fastify'
-import cors from '@fastify/cors';
+import fastify from "fastify";
+import cors from "@fastify/cors";
 
-const app = fastify()
+const app = fastify();
 
 app.register(cors);
 
@@ -47,6 +47,7 @@ const mainArticles = [
         text: "Página do BC informa que cidadão sem valores a receber atualmente poderá fazer nova consulta a partir de maio.",
       },
     ],
+    image: "",
   },
   {
     id: 2,
@@ -60,6 +61,8 @@ const mainArticles = [
         text: "Full content of the main education article.",
       },
     ],
+    image:
+      "https://s3-alpha-sig.figma.com/img/4860/b62c/5f89d5f732924bb3a0b37dccc69459e2?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GnRGIa6fjSVTdZh~b~Krxm1HJbaWHIHDNrE-S9YwnxANW-1AhywwKb5AXdciC5-yXMNEOhO6cpCtPcTF0OZQO6I8yOozhuoNKjwUVydTwc3BgGs7dl1Un2kpvkM5dtOqXdazzbYU5CLM5~dh3KdKctX3FeESXfHE-XJ0ftMjIrdpBanGmhmil0uvpJct5f~CJQcXt9MVq0fuamTxV0H6m5OttVKlqRHvIVgPPooL0~oJkpZoaB92L1paX9pQar7kRwlSvgNUHT9g7doe-Op-a-1S08WdkvwWMFQzGAPQR7eLs2JtDA5AaZqmKEWZZp1v5PgYKkmpVSn6JhuzAPAr0w__",
   },
   {
     id: 3,
@@ -73,6 +76,8 @@ const mainArticles = [
         text: "Full content of the main diversity article.",
       },
     ],
+    image:
+      "https://s3-alpha-sig.figma.com/img/21a6/9033/8c49079302a6944094664e80d3160112?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TwAuz4SldGR7BUK9ODNzxRKuVOP5I8xGMxPQYjm5TNj62ucEgjEA9dFiF7oPDL0SgWXa7MIqWj2Pww7lQdOLXhMt2jdQiqcDg6z2gEnXs5GMJH4Lyh~23Ku8uwsMFGL5Uz8Cn8ozOZqI0wrrSuyBDIZeZj8yXtpdFgG8RvwUhzNyDE8coF690cWEetHlS1lGA2~KBqgoujjf3eXaHh01Srn2sey~dqdGAoGlIx4dvL9Y6sJxW~eumXrQJ4cbpt~Y0txsaXy0f4UONuREREat0UH0UsaAUwDnbvZcDlRNjCbQ8LLnaHvCI4PdaVtb38wx0DtKc6-rURicUKnu5DPKsg__",
   },
 ];
 
@@ -89,6 +94,7 @@ const secondaryArticles = [
         text: "Full content of secondary economic article.",
       },
     ],
+    image: "",
   },
   {
     id: 5,
@@ -102,6 +108,7 @@ const secondaryArticles = [
         text: "Full content of secondary education article.",
       },
     ],
+    image: "",
   },
   {
     id: 6,
@@ -115,10 +122,9 @@ const secondaryArticles = [
         text: "Full content of secondary diversity article.",
       },
     ],
+    image: "",
   },
 ];
-
-
 
 app.get("/articles/main", async (request, reply) => {
   return { articles: mainArticles };
