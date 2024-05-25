@@ -125,6 +125,18 @@ app.get("/articles/secondary", async (request, reply) => {
   return { articles: secondaryArticles };
 });
 
+app.get("/articles/:id", async (request, reply) => {
+  const { id } = request.params as { id: string };
+  const article = mainArticles
+    .concat(secondaryArticles)
+    .find((a) => a.id === parseInt(id));
+  if (article) {
+    return { article };
+  } else {
+    reply.status(404).send({ error: "Article not found" });
+  }
+});
+
 app.listen({ port: 3333 }, (err, address) => {
   if (err) {
     console.error(err);
