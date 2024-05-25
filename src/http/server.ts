@@ -73,11 +73,57 @@ const mainArticles = [
   },
 ];
 
+const secondaryArticles = [
+  {
+    id: 4,
+    category: "ECONOMIA",
+    title:
+      "Quem não tiver valores a receber poderá ter nas próximas fases, diz BC",
+    summary: "Content of secondary economic article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary economic article.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    category: "EDUCAÇÃO",
+    title:
+      "Datafolha: Após ensino remoto, 76% precisam de reforço na alfabetização",
+    summary: "Content of secondary education article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary education article.",
+      },
+    ],
+  },
+  {
+    id: 6,
+    category: "DIVERSIDADES",
+    title:
+      "Lotomania: com prêmio de R$ 5 milhões, veja os números sorteados hoje",
+    summary: "Content of secondary diversity article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary diversity article.",
+      },
+    ],
+  },
+];
+
+
 
 app.get("/articles/main", async (request, reply) => {
   return { articles: mainArticles };
 });
 
+app.get("/articles/secondary", async (request, reply) => {
+  return { articles: secondaryArticles };
+});
 
 app.listen({ port: 3333 }, (err, address) => {
   if (err) {
