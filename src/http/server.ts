@@ -146,10 +146,13 @@ app.get("/articles/:id", async (request, reply) => {
   }
 });
 
-app.listen({ port: 3333 }, (err, address) => {
-  if (err) {
-    console.error(err);
-    process.exit(1);
+app.listen(
+  { host: "0.0.0.0", port: process.env.PORT ? Number(process.env.PORT) : 3000 },
+  (err, address) => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+    console.log(`Server listening at ${address}`);
   }
-  console.log(`Server listening at ${address}`);
-});
+);
