@@ -98,6 +98,20 @@ const secondaryArticles = [
   },
   {
     id: 5,
+    category: "ECONOMIA",
+    title:
+      "Quem não tiver valores a receber poderá ter nas próximas fases, diz BC",
+    summary: "Content of secondary economic article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary economic article.",
+      },
+    ],
+    image: "",
+  },
+  {
+    id: 6,
     category: "EDUCAÇÃO",
     title:
       "Datafolha: Após ensino remoto, 76% precisam de reforço na alfabetização",
@@ -111,7 +125,63 @@ const secondaryArticles = [
     image: "",
   },
   {
-    id: 6,
+    id: 7,
+    category: "DIVERSIDADES",
+    title:
+      "Lotomania: com prêmio de R$ 5 milhões, veja os números sorteados hoje",
+    summary: "Content of secondary diversity article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary diversity article.",
+      },
+    ],
+    image: "",
+  },
+  {
+    id: 8,
+    category: "ECONOMIA",
+    title:
+      "Quem não tiver valores a receber poderá ter nas próximas fases, diz BC",
+    summary: "Content of secondary economic article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary economic article.",
+      },
+    ],
+    image: "",
+  },
+  {
+    id: 9,
+    category: "ECONOMIA",
+    title:
+      "Quem não tiver valores a receber poderá ter nas próximas fases, diz BC",
+    summary: "Content of secondary economic article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary economic article.",
+      },
+    ],
+    image: "",
+  },
+  {
+    id: 10,
+    category: "EDUCAÇÃO",
+    title:
+      "Datafolha: Após ensino remoto, 76% precisam de reforço na alfabetização",
+    summary: "Content of secondary education article",
+    content: [
+      {
+        type: "paragraph",
+        text: "Full content of secondary education article.",
+      },
+    ],
+    image: "",
+  },
+  {
+    id: 11,
     category: "DIVERSIDADES",
     title:
       "Lotomania: com prêmio de R$ 5 milhões, veja os números sorteados hoje",
